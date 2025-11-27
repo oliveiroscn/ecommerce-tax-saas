@@ -1,0 +1,11 @@
+django>=4.2
+djangorestframework
+celery
+redis
+requests
+psycopg2-binary
+python-dotenv
+djoser
+djangorestframework-simplejwt
+gunicorn
+whitenoise

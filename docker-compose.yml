@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14-alpine
+    container_name: postgres_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      # Essas credenciais DEVEM COINCIDIR com o seu arquivo .env!
+      POSTGRES_USER: seu_usuario
+      POSTGRES_PASSWORD: sua_senha
+      POSTGRES_DB: seu_nome_db
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:alpine
+    container_name: redis_broker
+    # O Redis é usado como broker para o Celery
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
