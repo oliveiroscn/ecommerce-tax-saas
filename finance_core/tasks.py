@@ -1,3 +1,4 @@
+from celery import shared_task
 from .models import IntegrationProfile, IntegrationErrorLog
 from .utils import refresh_ml_token, fetch_and_process_ml_orders, fetch_and_process_shopee_orders, send_alert_email
 from .shopee_utils import sign_shopee_request, SHOPEE_API_URL
