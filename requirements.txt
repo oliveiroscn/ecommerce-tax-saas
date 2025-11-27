@@ -9,3 +9,4 @@ djoser
 djangorestframework-simplejwt
 gunicorn
 whitenoise
+dj-database-url
